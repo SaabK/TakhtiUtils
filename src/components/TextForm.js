@@ -28,6 +28,12 @@ export default function TextForm(props) {
         setText(newText+text.slice(1)); 
     }
 
+    const copyClick = () => {
+        let text = document.getElementById("textBox");
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
+
     let textSplit = text.split(" ").length - 1;
 
     return (
@@ -40,12 +46,13 @@ export default function TextForm(props) {
             <button className="btn btn-primary" onClick={upperClick}>Convert To Uppercase</button>
             <button className="btn btn-primary mx-3" onClick={lowerClick}>Convert To Lowercase</button>
             <button className="btn btn-primary " onClick={capClick}>Capitalize Text</button>
-            <button className="btn btn-danger mx-3" onClick={clearClick}>Clear Text</button>
+            <button className="btn btn-primary mx-3" onClick={copyClick}>Copy Text</button>
+            <button className="btn btn-danger " onClick={clearClick}>Clear Text</button>
         </div>
         <div className="container my-2">
             <h1>Text Info</h1>
             <p><strong>{textSplit}</strong> words and <strong>{text.length}</strong> characters</p>
-            <p><strong>{0.008*textSplit}</strong> Minutes Read</p>
+            <p><strong>{(0.008*textSplit)}</strong> Minutes Read</p>
 
             <h2>Preview</h2>
             <p>{text}</p>
