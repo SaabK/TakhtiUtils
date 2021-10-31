@@ -29,9 +29,14 @@ export default function TextForm(props) {
     }
 
     const copyClick = () => {
-        let text = document.getElementById("textBox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
+        let copiedText = document.getElementById("textBox");
+        copiedText.select();
+        navigator.clipboard.writeText(copiedText.value);
+    }
+
+    const spacesClick = () => {
+        let spacedText = text.split(/[ ]+/);
+        setText(spacedText.join(" "))
     }
 
     let textSplit = text.split(" ").length - 1;
@@ -41,13 +46,14 @@ export default function TextForm(props) {
         <div>
             <h2>{props.heading}</h2>
             <div className="mb-3">
-                <textarea className="form-control" id="textBox" rows="7" value={text} onChange={changeHandle} placeholder={"Start Typing..."} ></textarea>
+                <textarea className="form-control" id="textBox" rows="8" value={text} onChange={changeHandle} placeholder={"Start Typing..."} ></textarea>
             </div>
             <button className="btn btn-primary" onClick={upperClick}>Convert To Uppercase</button>
             <button className="btn btn-primary mx-3" onClick={lowerClick}>Convert To Lowercase</button>
             <button className="btn btn-primary " onClick={capClick}>Capitalize Text</button>
             <button className="btn btn-primary mx-3" onClick={copyClick}>Copy Text</button>
-            <button className="btn btn-danger " onClick={clearClick}>Clear Text</button>
+            <button className="btn btn-primary " onClick={spacesClick}>Remove Extra Spaces</button>
+            <button className="btn btn-danger mx-3" onClick={clearClick}>Clear Text</button>
         </div>
         <div className="container my-2">
             <h1>Text Info</h1>

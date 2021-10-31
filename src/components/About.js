@@ -77,7 +77,7 @@ export default function About() {
                 </div>
             </div>
 
-            <button onClick={toggleDarkMode} type="button" class="btn btn-dark my-2">{changeText}</button>
+            <button onClick={toggleDarkMode} type="button" className="btn btn-dark my-2">{changeText}</button>
         </div>
     )
 }
