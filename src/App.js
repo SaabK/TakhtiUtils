@@ -16,6 +16,10 @@ function App() {
       symbolID: symbolID,
       directory: directory
     })
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 2100);
   }
 
   const toggleMode = () => {

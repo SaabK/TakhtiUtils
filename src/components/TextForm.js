@@ -7,11 +7,13 @@ export default function TextForm(props) {
     const upperClick = () => {
         let upperedText = text.toUpperCase();
         setText(upperedText);
+        props.showAlert("Text was successfully converted to Uppercase", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
     }
 
     const lowerClick = () => {
         let loweredText = text.toLowerCase();
         setText(loweredText);
+        props.showAlert("Text was successfully converted to Lowercase", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
     }
 
     const clearClick = () => {
@@ -27,21 +29,24 @@ export default function TextForm(props) {
         let firstChar = text.charAt(0); 
         let newText= firstChar.toUpperCase(); 
         setText(newText+text.slice(1)); 
+        props.showAlert("Text was successfully Capitalized", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
     }
 
     const copyClick = () => {
         let copiedText = document.getElementById("textBox");
         copiedText.select();
         navigator.clipboard.writeText(copiedText.value);
-        props.showAlert("Text has been Copied", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
+        props.showAlert("Copied to Clipboard", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
     }
 
     const spacesClick = () => {
         let spacedText = text.split(/[ ]+/);
-        setText(spacedText.join(" "))
+        setText(spacedText.join(" "));
+        props.showAlert("Extra Spaces Removed", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
+        
     }
 
-    let textSplit = text.split(" ").length - 1;
+    let wordCount = text.split(" ").length - 1;
 
     return (
         <>
@@ -59,8 +64,8 @@ export default function TextForm(props) {
         </div>
         <div className="container my-2">
             <h1>Text Info</h1>
-            <p><strong>{textSplit}</strong> words and <strong>{text.length}</strong> characters</p>
-            <p><strong>{(0.008*textSplit)}</strong> Minutes Read</p>
+            <p><strong>{wordCount}</strong> words and <strong>{text.length}</strong> characters</p>
+            <p><strong>{(0.008*wordCount)}</strong> Minutes Read</p>
 
             <h2>Preview</h2>
             <p>{text.length===0?'Nothing to preview here...':text}</p>
