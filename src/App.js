@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
+// import TextForm from './components/TextForm';
+
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -40,10 +47,10 @@ function App() {
     <>
     <Navbar title="TakhtiUtils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
-    <div className="container my-4">
+    {/* <div className="container my-4">
       <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>
-    </div>
-    {/* <About/> */}
+    </div> */}
+    <About/>
     </>
   );
 }
