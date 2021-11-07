@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
     Link,
   } from "react-router-dom"
 
@@ -25,9 +24,9 @@ export default function Navbar(props) {
                 </div>
             </div>
 
-            <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-                <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                <label className ="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+            <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'} mx-2`}>
+                <input className="form-check-input " onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                <label className ="form-check-label " htmlFor="flexSwitchCheckDefault">Dark Mode</label>
             </div>
         </nav>
     )
