@@ -15,7 +15,8 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/TakhtiUtils/">Home</Link>
+                            {/* <Link className="nav-link active" to="/TakhtiUtils/">Home</Link> */}
+                            <span className="nav-link active">Home</span>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About</Link>
