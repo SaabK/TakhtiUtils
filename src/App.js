@@ -50,7 +50,7 @@ function App() {
         <Route exact path="/About">
           <About/>
         </Route>
-        <Route exact path={["/TakhtiUtils/", "/"]} >
+        <Route exact path="/TakhtiUtils/" >
           <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>
         </Route>
       </Switch>
