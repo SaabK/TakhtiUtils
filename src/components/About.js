@@ -10,28 +10,28 @@ export default function About() {
     // With States
 
     const [darkMode, setDarkMode] = useState({
-        backgroundColor : '#0f0f0f',
-        color : 'white',
+        backgroundColor : 'white',
+        color : 'black',
         // borderRadius : '2%'
     })
 
     const [changeText, setChangeText] = useState("Enable Light Mode")
 
     const toggleDarkMode = () => {
-        if(darkMode.color === 'white') {
+        if(darkMode.color === 'black') {
             
             setDarkMode({
-                color: 'black',
-                backgroundColor: 'white'
+                color: 'white',
+                backgroundColor: '#0f0f0f'
             })
-            setChangeText("Enable Dark Mode")
+            setChangeText("Enable Light Mode")
         }
         else{
             setDarkMode({
-                backgroundColor : '#0f0f0f',
-                color : 'white'
+                backgroundColor : 'white',
+                color : 'black'
             })
-            setChangeText("Enable Light Mode")
+            setChangeText("Enable Dark Mode")
         }
     }
     

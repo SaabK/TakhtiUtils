@@ -5,11 +5,11 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Switch,
   Link
 } from "react-router-dom"
-// import TextForm from './components/TextForm';
+import TextForm from './components/TextForm';
 
 
 function App() {
@@ -44,14 +44,19 @@ function App() {
   }
 
   return (
-    <>
-    <Navbar title="TakhtiUtils" mode={mode} toggleMode={toggleMode}/>
-    <Alert alert={alert}/>
-    {/* <div className="container my-4">
-      <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>
-    </div> */}
-    <About/>
-    </>
+    <Router>
+      <Navbar title="TakhtiUtils" mode={mode} toggleMode={toggleMode}/>
+      <Alert alert={alert}/>
+      <Switch>
+        <Route exact path="/About">
+          <About/>
+        </Route>
+        <Route exact path="/" >
+          <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>
+        </Route>
+      </Switch>
+      {/* <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/> */}
+    </Router>
   );
 }
 
