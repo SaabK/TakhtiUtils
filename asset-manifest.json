@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TakhtiUtils/static/css/main.659e2808.chunk.css",
-    "main.js": "/TakhtiUtils/static/js/main.acf02fc6.chunk.js",
-    "main.js.map": "/TakhtiUtils/static/js/main.acf02fc6.chunk.js.map",
+    "main.js": "/TakhtiUtils/static/js/main.eb71d130.chunk.js",
+    "main.js.map": "/TakhtiUtils/static/js/main.eb71d130.chunk.js.map",
     "runtime-main.js": "/TakhtiUtils/static/js/runtime-main.375bae3f.js",
     "runtime-main.js.map": "/TakhtiUtils/static/js/runtime-main.375bae3f.js.map",
     "static/js/2.7f4a0382.chunk.js": "/TakhtiUtils/static/js/2.7f4a0382.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.375bae3f.js",
     "static/js/2.7f4a0382.chunk.js",
     "static/css/main.659e2808.chunk.css",
-    "static/js/main.acf02fc6.chunk.js"
+    "static/js/main.eb71d130.chunk.js"
   ]
 }
