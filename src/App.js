@@ -48,7 +48,7 @@ function App() {
       <Alert alert={alert}/>
       <Switch>
         <Route exact path="/About">
-          <About/>
+          <About mode={mode}/>
         </Route>
         <Route exact path="/TakhtiUtils/" >
           <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>

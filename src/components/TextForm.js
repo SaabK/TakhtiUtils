@@ -36,6 +36,7 @@ export default function TextForm(props) {
         let copiedText = document.getElementById("textBox");
         copiedText.select();
         navigator.clipboard.writeText(copiedText.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Copied to Clipboard", "success", "check-circle-fill", "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z");
     }
 
@@ -46,7 +47,8 @@ export default function TextForm(props) {
         
     }
 
-    let wordCount = text.split(" ").length - 1;
+    let wordCount = text.split(" ").filter((element)=>{return element.length !== 0}).length;
+    // let wordCount = text.split(" ").length - 1;
 
     return (
         <>
@@ -55,12 +57,12 @@ export default function TextForm(props) {
             <div className="mb-3">
                 <textarea className="form-control" id="textBox" rows="8" value={text} onChange={changeHandle} placeholder={"Start Typing..."} style={{backgroundColor: `${props.mode==='dark'?'#0a0a0a':'white'}`, color: `${props.mode==='dark'?'white':'black'}`}}></textarea>
             </div>
-            <button className="btn btn-primary my-2" onClick={upperClick}>Convert To Uppercase</button>
-            <button className="btn btn-primary mx-2 my-2" onClick={lowerClick}>Convert To Lowercase</button>
-            <button className="btn btn-primary my-2" onClick={capClick}>Capitalize Text</button>
-            <button className="btn btn-primary mx-2 my-2" onClick={copyClick}>Copy Text</button>
-            <button className="btn btn-primary my-2" onClick={spacesClick}>Remove Extra Spaces</button>
-            <button className="btn btn-danger mx-2 my-2" onClick={clearClick}>Clear Text</button>
+            <button disabled={text.length===0} className="btn btn-primary my-2" onClick={upperClick}>Convert To Uppercase</button>
+            <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={lowerClick}>Convert To Lowercase</button>
+            <button disabled={text.length===0} className="btn btn-primary my-2" onClick={capClick}>Capitalize Text</button>
+            <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={copyClick}>Copy Text</button>
+            <button disabled={text.length===0} className="btn btn-primary my-2" onClick={spacesClick}>Remove Extra Spaces</button>
+            <button disabled={text.length===0} className="btn btn-danger mx-2 my-2" onClick={clearClick}>Clear Text</button>
         </div>
         <div className="container my-2">
             <h1>Text Info</h1>
