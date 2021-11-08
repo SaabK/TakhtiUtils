@@ -51,7 +51,7 @@ function App() {
           <About mode={mode}/>
         </Route>
         <Route exact path="/TakhtiUtils/" >
-          <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/>
+          <TextForm mode={mode} showAlert={showAlert} heading="Try TakhtiUtils - Word Counter, Change Case, Remove Extra Spaces"/>
         </Route>
       </Switch>
       {/* <TextForm mode={mode} showAlert={showAlert} heading="Enter Some Text:"/> */}
