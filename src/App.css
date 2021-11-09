@@ -12,3 +12,7 @@
 .text-color-black{
   color: black;
 }
+
+.accordion-button::after{
+  filter: invert(1);
+}
