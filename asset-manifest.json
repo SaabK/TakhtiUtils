@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/TakhtiUtils/static/css/main.fc78f03c.chunk.css",
-    "main.js": "/TakhtiUtils/static/js/main.66ce723a.chunk.js",
-    "main.js.map": "/TakhtiUtils/static/js/main.66ce723a.chunk.js.map",
+    "main.css": "/TakhtiUtils/static/css/main.e88b2939.chunk.css",
+    "main.js": "/TakhtiUtils/static/js/main.53aca20a.chunk.js",
+    "main.js.map": "/TakhtiUtils/static/js/main.53aca20a.chunk.js.map",
     "runtime-main.js": "/TakhtiUtils/static/js/runtime-main.375bae3f.js",
     "runtime-main.js.map": "/TakhtiUtils/static/js/runtime-main.375bae3f.js.map",
     "static/js/2.7f4a0382.chunk.js": "/TakhtiUtils/static/js/2.7f4a0382.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.230b7843.chunk.js": "/TakhtiUtils/static/js/3.230b7843.chunk.js",
     "static/js/3.230b7843.chunk.js.map": "/TakhtiUtils/static/js/3.230b7843.chunk.js.map",
     "index.html": "/TakhtiUtils/index.html",
-    "static/css/main.fc78f03c.chunk.css.map": "/TakhtiUtils/static/css/main.fc78f03c.chunk.css.map",
+    "static/css/main.e88b2939.chunk.css.map": "/TakhtiUtils/static/css/main.e88b2939.chunk.css.map",
     "static/js/2.7f4a0382.chunk.js.LICENSE.txt": "/TakhtiUtils/static/js/2.7f4a0382.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.375bae3f.js",
     "static/js/2.7f4a0382.chunk.js",
-    "static/css/main.fc78f03c.chunk.css",
-    "static/js/main.66ce723a.chunk.js"
+    "static/css/main.e88b2939.chunk.css",
+    "static/js/main.53aca20a.chunk.js"
   ]
 }
